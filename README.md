@@ -2,3 +2,5 @@
 
 ### Putting your scrap in the TacCom
 ![logo](https://github.com/TheanosLearning/Gears4ScrapCom/raw/master/images/scrap325.png)
+
+A simple extension for loading in your current scrap balance into the top nav wallet on gearsofwar.com
