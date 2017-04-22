@@ -1,0 +1,28 @@
+{
+	"manifest_version": 2,
+	"name": "Gears of War 4 Scrap-Com",
+	"short_name": "G4SC",
+	"version": "1.0",
+	"description": "Places your current scrap alongside your credits in the top nav.",
+	"icons": {
+		"48": "img/scrap48.png",
+		"128": "img/scrap128.png"
+	},
+	"content_scripts": [
+	  {
+	    "matches": ["https://gearsofwar.com/*/cards*"],
+	    "js": ["content/scrap.js"],
+	    "css": ["styles/scrap.css"]
+	  }
+	],
+	"browser_action": {
+  		"default_icon": "img/scrap20.png"
+	},
+	"background": {
+  		"scripts": ["background/background.js"]
+	},
+	"web_accessible_resources": [
+		"img/*.png",
+		"styles/scrap.css"
+	]
+}
