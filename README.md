@@ -5,4 +5,4 @@
 
 #### A simple extension for loading in your current scrap balance into the top nav wallet on gearsofwar.com
 
-##### Active from (https://gearsofwar.com/cards)
+##### * Active from https://gearsofwar.com/cards
