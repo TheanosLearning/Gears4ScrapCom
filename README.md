@@ -1,6 +1,6 @@
 # Gears of War 4 ScrapCom `v1.0`
 
-## Putting your scrap into the TacCom == ScrapCom
+### Putting your scrap into the TacCom == ScrapCom
 ![logo](https://github.com/TheanosLearning/Gears4ScrapCom/raw/master/images/scrap325.png)
 
 #### A simple extension for loading in your current scrap balance into the top nav wallet on gearsofwar.com
@@ -13,4 +13,4 @@
 
 #### Watch it in action
 
-![demo-gif](https://media.giphy.com/media/K97n0GzpN7k52/giphy.gif)
+![demo-gif](https://media.giphy.com/media/xUA7bjbT4IBQMda6sw/giphy.gif)
