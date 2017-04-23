@@ -11,6 +11,6 @@
 
 ![demo](https://github.com/TheanosLearning/Gears4ScrapCom/raw/master/images/scrap-demo.png)
 
-#### ScrapCom in action!
+#### In action!
 
-![demo-gif](https://media.giphy.com/media/xUA7bjbT4IBQMda6sw/giphy.gif)
+![demo-gif](https://media.giphy.com/media/K97n0GzpN7k52/giphy.gif)
