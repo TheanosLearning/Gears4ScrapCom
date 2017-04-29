@@ -54,7 +54,7 @@ let updateScrap = function scrapCom() {
         let scrap = document.createElement('p');
         scrap.id = 'scrap-com';
         scrap.innerHTML =   `<img alt="Cards_ScrapBalance" class="scrapIcon" src="${chrome.extension.getURL("/img/scrap20.png")}">
-                            <span class="scrapCounter">${scrapBalance.toLocaleString()}</span>`;
+                             <span id="scrapCounter" class="scrapCounter">${scrapBalance.toLocaleString()}</span>`;
 
         wallet.insertBefore(scrap, wallet.firstChild);
     };
@@ -63,18 +63,33 @@ let updateScrap = function scrapCom() {
 
 updateScrap();
 
-function listenForConfirm() {
-    let confirmBtn = document.querySelector("[data-loc-key='Confirm']").closest('button');
-    confirmBtn.addEventListener("click", () => setTimeout(updateScrap, 1000));// wait for crafting wallet counter
-};
-
 function dust(event) {
+    let key;
     let element = event.target;
-    if (element.dataset.locKey === "Crafting_DestroySingle" 
-        || element.dataset.locKey === "Crafting_DestroyDuplicates"
-        || element.dataset.locKey === "Crafting_CraftSingle") {
-        setTimeout(listenForConfirm, 500);// wait for dusting modal
+    let btn = element.closest('button');
+    if (btn) {
+        let craftBtn = btn.querySelector("[data-loc-key");
+        if (craftBtn) {
+            key = craftBtn.dataset.locKey;
+        }
+    }
+    if (key === "Crafting_DestroySingle" || key === "Crafting_DestroyDuplicates" || key === "Crafting_CraftSingle") {
+        let scrapCounter = document.getElementById('scrapCounter');
+        // select the target node
+        let target = document.querySelector(".walletCounter");
+        // create an observer instance
+        let observer = new MutationObserver((mutations) => {
+            mutations.forEach((mutation) => {
+                let newScrap = mutation.addedNodes[0].data;
+                scrapCounter.innerText = newScrap;
+            });
+        });
+        // configuration of the observer:
+        let config = { attributes: true, childList: true, characterData: true };
+        // pass in the target node, as well as the observer options
+        observer.observe(target, config);
     }
 }
 
 document.body.addEventListener("click", dust);
+
