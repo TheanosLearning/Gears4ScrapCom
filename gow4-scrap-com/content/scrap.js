@@ -66,14 +66,10 @@ updateScrap();
 function dust(event) {
     let key;
     let element = event.target;
-    let btn = element.closest('button');
-    if (btn) {
-        let craftBtn = btn.querySelector("[data-loc-key");
-        if (craftBtn) {
-            key = craftBtn.dataset.locKey;
-        }
+    if (element.closest('button') && element.closest('button').querySelector("[data-loc-key")) {
+        key = craftBtn.dataset.locKey;
     }
-    if (key === "Crafting_DestroySingle" || key === "Crafting_DestroyDuplicates" || key === "Crafting_CraftSingle") {
+    if (key.includes("DestroySingle") || key.includes("DestroyDuplicates") || key.includes("CraftSingle")) {
         let scrapCounter = document.getElementById('scrapCounter');
         // select the target node
         let target = document.querySelector(".walletCounter");
