@@ -3,6 +3,8 @@
 ### Putting your scrap into your TacCom == ScrapCom
 ![logo](https://github.com/TheanosLearning/Gears4ScrapCom/raw/master/images/scrap325.png)
 
+### Now on the [Chrome Web Store](https://chrome.google.com/webstore/detail/gears-of-war-4-scrap-com/eefknibgoiendmojcnghhddimcfcigff)!
+
 #### A simple extension for loading in your current scrap balance into the top nav wallet on gearsofwar.com
 
 * Active from https://gearsofwar.com/cards
